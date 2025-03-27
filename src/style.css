@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap");
+
+/*
+inter
+lexend Deca
+*/
+:root {
+  --main-background: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+
+  --main-heading-stats: hsl(0, 0%, 100%);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--main-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-template-areas: "." "hero" "footer";
+  grid-template-rows: 5vh 90vh 5vh;
+}
+
+.hero {
+  grid-area: hero;
+  color: var(--main-paragraph);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--card-background);
+}
+
+.hero .informations{
+    padding: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.attribution {
+  grid-area: footer;
+  font-size: 13px;
+  text-align: center;
+  color: var(--main-heading-stats);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  color: var(--accent);
+}
