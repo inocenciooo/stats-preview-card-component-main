@@ -1,6 +1,5 @@
 @media (max-width: 1150px) {
-
-  body{
+  body {
     display: grid;
     grid-template-areas: "." "hero" "footer";
     grid-template-rows: 3vh 1fr 1fr;
@@ -14,6 +13,7 @@
   }
 
   .hero .informations {
+    grid-area: informations;
     order: 1;
     text-align: center;
     width: 100%;
@@ -31,7 +31,9 @@
     flex-direction: column;
     gap: 3rem;
   }
-
+  .hero .image {
+    grid-area: image;
+  }
   .hero .image,
   .image img {
     border-radius: 0.5rem 0.5rem 0rem 0rem;
@@ -48,5 +50,4 @@
   body .hero {
     width: 35rem;
   }
-
 }
