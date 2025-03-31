@@ -19,7 +19,7 @@ lexend Deca
   padding: 0;
   box-sizing: border-box;
 }
-html{
+html {
   font-size: 62.5%;
 }
 body {
@@ -30,9 +30,18 @@ body {
   justify-content: center;
   align-items: center;
 }
-img {
+
+.image {
+  background-color: var(--accent);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.image img {
+  height: 100%;
   width: 100%;
-  border-radius: 0 .5rem .5rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  mix-blend-mode: multiply;
+  filter: brightness(130%) hue-rotate(180deg) contrast(50%);
 }
 
 .hero {
@@ -44,12 +53,12 @@ img {
   font-family: "lexend Deca";
   margin: 0 10rem;
   width: 110rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .hero .informations {
-  padding: 0 5.8rem;
-  padding-top: 1rem;
+  padding: 6rem;
+  padding-right: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -58,7 +67,14 @@ img {
 .hero .informations .content h1 {
   font-family: inter;
   color: var(--main-heading-stats);
-  font-size: 4rem;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.hero .informations .content p {
+  line-height: 2.5rem;
+  font-weight: 200;
 }
 
 .hero .informations div h1 > span {
@@ -66,28 +82,40 @@ img {
 }
 
 .hero .informations .content p {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .hero .informations .statistics {
   display: flex;
-  justify-content: space-between;
+  margin-top: 6rem;
+  justify-content: flex-start;
+  gap: 7rem;
   align-items: center;
   text-transform: uppercase;
+  font-weight: 200;
 }
 
-.hero .informations .statistics .data p:nth-child(1){
+.hero .informations .statistics .data p:nth-child(1) {
   color: var(--main-heading-stats);
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
+.hero .informations .statistics .data p:nth-child(2) {
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+}
 
 .attribution {
   grid-area: footer;
   font-size: 13px;
   text-align: center;
   color: var(--main-heading-stats);
+  font-family: "lexend Deca";
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2vh;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);

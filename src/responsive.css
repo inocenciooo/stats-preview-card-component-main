@@ -1,0 +1,52 @@
+@media (max-width: 1150px) {
+
+  body{
+    display: grid;
+    grid-template-areas: "." "hero" "footer";
+    grid-template-rows: 3vh 1fr 1fr;
+  }
+  body .hero {
+    grid-area: hero;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+  }
+
+  .hero .informations {
+    order: 1;
+    text-align: center;
+    width: 100%;
+    padding: 4rem 2rem;
+    gap: 4rem;
+  }
+
+  .hero .informations .content h1 {
+    font-size: 3rem;
+  }
+
+  .hero .informations .statistics {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .hero .image,
+  .image img {
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+  }
+
+  body .attribution {
+    grid-area: footer;
+    position: relative;
+    padding: 3vh 0;
+  }
+}
+
+@media (max-width: 600px) {
+  body .hero {
+    width: 35rem;
+  }
+
+}
